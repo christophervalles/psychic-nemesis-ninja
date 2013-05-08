@@ -15,4 +15,14 @@ class PsychicMemesisNinja < Vagrant.plugin("2")
     require_relative "commands/restart-memcached"
     RestartMemcached
   end
+  
+  command "export-db" do
+    require_relative "commands/export-db"
+    ExportDb
+  end
+  
+  command "import-db" do
+    require_relative "commands/import-db"
+    ImportDb
+  end
 end
